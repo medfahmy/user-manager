@@ -1,0 +1,20 @@
+<mat-card>
+  <mat-toolbar class="toolbar" color="basic">
+    <a class="tool" routerLink="users" routerLinkActive="active" mat-raised-button color="primary">User List</a>
+    <a class="tool" routerLink="add" routerLinkActive="active" mat-raised-button color="primary">Add User</a>
+  </mat-toolbar>
+</mat-card>
+
+
+
+
+
+<mat-card>
+  <div style="padding: 30 px;">
+    <div>
+      <div>
+        <router-outlet></router-outlet>
+      </div>
+    </div>
+  </div>
+</mat-card>

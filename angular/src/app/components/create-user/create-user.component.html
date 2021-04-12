@@ -1,0 +1,32 @@
+<h3>Create User</h3>
+
+<form [formGroup]="userForm">
+
+  <mat-form-field>
+    <mat-label>Name</mat-label>
+    <input matInput type="text" placeholder="Your name" formControlName="name">
+  </mat-form-field>
+  <br>
+
+  <mat-form-field>
+    <mat-label>Latitude</mat-label>
+    <input matInput type="text" placeholder="Latitude" formControlName="latitude">
+  </mat-form-field>
+  <br>
+
+  <mat-form-field>
+    <mat-label>Longitude</mat-label>
+    <input matInput type="text" placeholder="Longitude" formControlName="longitude">
+  </mat-form-field>
+
+  <br><button type="submit" mat-raised-button [disabled]="userForm.invalid" color="primary"
+    (click)="submit(userForm.value)">Submit</button>
+
+</form>
+
+{{userForm.value | json}}
+<!-- </div> -->
+
+<mat-card>
+  <app-map [eventToParent]="eventFromMap"></app-map>
+</mat-card>
